@@ -1,0 +1,54 @@
+<div class="welcome-content" *ngIf="eventConfig">
+  <header>
+    <h1>Scouts de México</h1>
+    <h2>Provincia Querétaro</h2>
+    <h3>{{ eventConfig.nombreEvento }}</h3>
+    <p class="event-dates">{{ eventConfig.fechaInicio }} - {{ eventConfig.fechaFin }}</p>
+  </header>
+
+  <!-- Sección de Instalación PWA -->
+  <div *ngIf="!(isPwaActuallyInstalled$ | async) as notInstalled">
+    <!-- Botón de Instalación (si el prompt está disponible) -->
+    <div *ngIf="pwaService.canInstall()" class="pwa-prompt-section">
+      <p class="highlight-text">"Para una mejor experiencia, añade esta página al inicio"</p>
+      <button (click)="requestPwaInstall()" class="install-button-prominent">
+        <img src="assets/icons/icon-72x72.png" alt="" style="vertical-align: middle; margin-right: 8px; height: 24px;">
+        Añadir a Pantalla de Inicio
+      </button>
+      <div class="pwa-install-instructions">
+        <h4>Instrucciones rápidas:</h4>
+        <p><strong>iOS (Safari):</strong> Toca el botón 'Compartir' <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/IOS_share_icon.svg/120px-IOS_share_icon.svg.png" alt="iOS Share Icon" style="height:1em; vertical-align:middle;"> y luego 'Agregar a inicio'.</p>
+        <p><strong>Android (Chrome):</strong> Toca los tres puntos ⋮ y luego 'Instalar aplicación' o 'Agregar a la pantalla principal'.</p>
+      </div>
+    </div>
+    <!-- Instrucciones Manuales (si no hay prompt pero no está instalada) -->
+    <div *ngIf="!pwaService.canInstall() && notInstalled" class="pwa-prompt-section">
+        <p class="highlight-text">Añade ésta página a tu pantalla de inicio para un acceso más rápido y sin Internet.</p>
+        <div class="pwa-install-instructions">
+          <h4>Instrucciones para añadir manualmente:</h4>
+          <p><strong>iOS (Safari):</strong> Toca el botón 'Compartir' <img src="../../../assets/icons/iOSShare.svg" alt="iOS Share Icon" style="height:1em; vertical-align:middle;"> y luego 'Agregar a inicio'.</p>
+          <p><strong>Android (Chrome):</strong> Toca los tres puntos ⋮ y luego 'Agregar a la pantalla principal'.</p>
+        </div>
+    </div>
+  </div>
+
+
+  <!-- Sección de Countdown -->
+  <!-- Se muestra si está instalada O si no está instalada Y (no hay prompt o el prompt ya fue manejado) -->
+  <!-- Esta lógica puede necesitar ajuste fino dependiendo de cuándo quieres que se vea exactamente el countdown -->
+  <div *ngIf="(isPwaActuallyInstalled$ | async) || (!pwaService.canInstall() && !(isPwaActuallyInstalled$ | async))" class="countdown-section">
+    <p>{{ countdownDisplay }}</p>
+  </div>
+
+  <!-- Sección de Selección de Equipo -->
+  <!-- SOLO SE MUESTRA SI LA PWA ESTÁ INSTALADA Y showTeamSelection ES TRUE -->
+  <div *ngIf="(isPwaActuallyInstalled$ | async) && showTeamSelection" class="team-selection-section">
+    <h4>Elige tu equipo:</h4>
+    <select [(ngModel)]="selectedTeamModel" (change)="onTeamSelect()">
+      <option value="" disabled>-- Selecciona un equipo --</option>
+      <option *ngFor="let equipo of eventConfig.equipos" [value]="equipo">
+        {{ equipo }}
+      </option>
+    </select>
+  </div>
+</div>

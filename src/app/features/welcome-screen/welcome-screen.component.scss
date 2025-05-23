@@ -1,0 +1,66 @@
+// Usar variables de styles.scss si están en :root
+// Si no, puedes definirlas aquí o importarlas.
+
+.welcome-content {
+  background-color: var(--card-background-color);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+header {
+  margin-bottom: 20px;
+  h1 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+  }
+  h2 {
+    font-size: 1.2em;
+    color: var(--secondary-color);
+    margin-bottom: 5px;
+  }
+  h3 {
+    font-size: 1.3em;
+    color: var(--accent-color);
+    margin-bottom: 10px;
+  }
+  .event-dates {
+    font-size: 0.9em;
+    color: #666;
+  }
+}
+
+.pwa-prompt-section {
+  margin-bottom: 20px;
+  .highlight-text {
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+  }
+  .install-button-prominent {
+    background-color: var(--accent-color);
+    color: var(--text-color-primary); // Asegúrate que el texto tenga buen contraste
+    font-weight: bold;
+    &:hover {
+      // background-color: darken(var(--accent-color), 10%); // <--- LÍNEA ANTIGUA
+      background-color: var(--accent-color-darker);       // <--- LÍNEA NUEVA
+    }
+  }
+}
+
+
+.countdown-section p {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.team-selection-section {
+  margin-top: 25px;
+  h4 {
+    margin-bottom: 10px;
+    color: var(--primary-color);
+  }
+}

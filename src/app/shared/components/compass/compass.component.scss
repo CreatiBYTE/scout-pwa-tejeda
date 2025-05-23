@@ -1,0 +1,55 @@
+.compass-container {
+  width: 150px;
+  height: 150px;
+  margin: 20px auto;
+}
+
+.compass-svg {
+  width: 100%;
+  height: 100%;
+
+  .compass-circle-bg {
+    fill: var(--card-background-color); // Ya lo tenías, renombré la clase
+    // stroke: var(--primary-color); // Ya lo tenías
+    // stroke-width: 1.5; // Ya lo tenías
+  }
+
+  g { // Para que la transformación de rotación tenga efecto en los grupos principales
+    transition: transform 0.2s ease-out; // Transición más rápida para la brújula
+  }
+
+  // Estilos para los guiones de grados
+  .degree-ticks {
+    .major-tick {
+      stroke: var(--text-color-primary); // Color para guiones principales
+      stroke-width: 0.8;                 // Grosor
+    }
+    .minor-tick {
+      stroke: var(--secondary-color);   // Color para guiones secundarios
+      stroke-width: 0.4;                // Grosor más delgado
+    }
+  }
+
+  // Estilos para los puntos cardinales
+  .cardinal-point {
+    font-size: 10px; // Ya lo tenías
+    font-family: 'Montserrat', sans-serif; // Asegurar la fuente
+    fill: var(--text-color-primary); // Color por defecto
+    text-anchor: middle; // Ya lo tenías
+    dominant-baseline: middle; // Ayuda a centrar verticalmente mejor el texto
+
+    &.north {
+      fill: var(--primary-color); // Destacar la N
+      font-weight: bold;          // Ya lo tenías
+    }
+    // &.south, &.east, &.west si quieres estilos específicos
+  }
+
+  // Estilos para la flecha
+  .poi-arrow-main {
+    fill: var(--status-off-route); // Color rojo para la flecha
+  }
+  .poi-arrow-center {
+    fill: var(--status-off-route); // Círculo central de la flecha
+  }
+}

@@ -1,0 +1,95 @@
+<div class="navigation-panel" *ngIf="eventConfig && selectedTeam">
+  <header class="navigation-header">
+    <h3>{{ eventConfig.nombreEvento }}</h3>
+    <p>
+      <strong>{{ selectedTeam }}</strong> |
+      <button (click)="changeTeam()" class="link-button">Cambiar Equipo</button>
+    </p>
+  </header>
+
+  <!-- Botón para activar sensores y solicitar permisos -->
+  <div *ngIf="mostrarBotonActivarSensores && !sensoresActivados" class="activate-sensors-prompt">
+    <p>
+      Para comenzar la navegación y usar la brújula, necesitamos tu permiso.
+    </p>
+    <button (click)="solicitarPermisosYActivarSensores()" class="activate-button">
+      Activar Brújula y Navegación
+    </button>
+    <!-- Mostrar errores de permisos si ocurren antes de la activación -->
+    <p *ngIf="(deviceState$ | async)?.locationError as locError" class="text-status-off-route sensor-error">
+      Error de ubicación: {{ locError }}
+    </p>
+    <p *ngIf="(deviceState$ | async)?.orientationError as orientError" class="text-status-off-route sensor-error">
+      Error de orientación: {{ orientError }}
+    </p>
+  </div>
+
+  <!-- Contenido de Navegación (se muestra después de intentar activar sensores) -->
+  <!-- Usar un ng-container para el async pipe y la asignación a 'deviceState' -->
+  <ng-container *ngIf="deviceState$ | async as deviceState">
+    <div *ngIf="sensoresActivados"> <!-- Ahora este div depende de sensoresActivados y de que deviceState exista -->
+      <div *ngIf="nextPOI; else routeCompleted">
+        <div class="poi-info">
+          <p class="muted">Siguiente Punto</p>
+          <h1>{{ nextPOI.nombrePOI }}</h1>
+
+          <!-- Información de Ubicación -->
+          <p >
+            <span *ngIf="deviceState.currentLocation" >Distancia: <strong>{{ distanceToNextPOI | number:'1.0-0' }} metros</strong></span> 
+            <span *ngIf="deviceState.currentLocation"> Rumbo: <strong>{{ bearingToNextPOI | number:'1.0-1' }}°</strong></span>
+          </p>
+          
+          <!-- <p *ngIf="deviceState.currentLocation && deviceState.accuracy !== null">
+            Precisión GPS: <strong>{{ deviceState.accuracy | number:'1.0-0' }} m</strong>
+          </p> -->
+
+          <!-- Mensajes de Estado/Error de Ubicación -->
+          <p *ngIf="!deviceState.currentLocation && !deviceState.locationError && sensoresActivados" class="text-status-warning">
+            Obteniendo señal GPS...
+          </p>
+          <p *ngIf="deviceState.locationError" class="text-status-off-route sensor-error">
+            {{ deviceState.locationError }}
+          </p>
+        </div>
+
+        <!-- Brújula y Error de Orientación -->
+        <app-compass
+          [deviceOrientation]="deviceState.deviceOrientation"
+          [bearingToPOI]="bearingToNextPOI">
+        </app-compass>
+        <p *ngIf="deviceState.orientationError" class="text-status-warning sensor-error">
+          {{ deviceState.orientationError }}
+        </p>
+        <p *ngIf="!deviceState.orientationError && deviceState.deviceOrientation === 0 && sensoresActivados && !deviceState.currentLocation" class="text-status-info">
+          Orientación inicial: {{ deviceState.deviceOrientation | number:'1.0-0' }}°. Gira el dispositivo.
+        </p>
+
+        <!-- Feedback de Navegación General -->
+        <div class="status-feedback" [ngClass]="navigationStatusClass">
+          <p>{{ navigationStatus }}</p>
+        </div>
+
+        <div *ngIf="visitedPOIs.length > 0" class="visited-pois-section">
+        <h4>Puntos Visitados:</h4>
+        <ul>
+          <li *ngFor="let poi of visitedPOIs; let i = index">
+            {{ i + 1 }}. {{ poi.nombrePOI }}
+          </li>
+        </ul>
+      </div>
+      
+      </div>
+    </div>
+
+  </ng-container>
+
+  <!-- Mensaje de Ruta Completada -->
+  <ng-template #routeCompleted>
+    <div class="route-completed-message">
+      <h2>¡Aventura Completada!</h2>
+      <p>{{ navigationStatus }}</p>
+      <p>¡Buen trabajo, {{ selectedTeam }}!</p>
+    </div>
+  </ng-template>
+
+</div>

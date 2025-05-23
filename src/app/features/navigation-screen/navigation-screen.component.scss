@@ -1,0 +1,150 @@
+.navigation-panel {
+  background-color: var(--card-background-color);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.navigation-header {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+
+  h2 {
+    margin-top: 0;
+    color: var(--primary-color);
+  }
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  p {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .link-button {
+    background: none;
+    border: none;
+    color: var(--accent-color);
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 0;
+    font-size: 0.9em;
+  }
+}
+
+.poi-info {
+  margin-bottom: 15px;
+  
+  h1 {
+    color: var(--secondary-color);
+    margin:0;
+  }
+
+  p {
+    font-size: .85em;
+    margin:  0;
+
+    strong {
+      color: var(--text-color-primary);
+    }
+  }
+  muted {
+    font-size: 0.8em;
+    color: #999;
+  }
+}
+
+.status-feedback {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+
+  &.text-status-in-route {
+    // background-color: lighten(var(--status-in-route), 40%); // <--- LÍNEA ANTIGUA
+    background-color: var(--status-in-route-light); // <--- LÍNEA NUEVA
+    border: 1px solid var(--status-in-route);
+    color: var(--status-in-route); // Asegúrate que el texto siga teniendo buen contraste
+  }
+
+  &.text-status-warning {
+    // background-color: lighten(var(--status-warning), 35%); // <--- LÍNEA ANTIGUA (asumiendo que tenías algo similar)
+    background-color: var(--status-warning-light); // <--- LÍNEA NUEVA
+    border: 1px solid var(--status-warning);
+    color: var(--status-warning); // Ajusta el color del texto si es necesario
+  }
+
+  &.text-status-off-route {
+    // background-color: lighten(var(--status-off-route), 35%); // <--- LÍNEA ANTIGUA (asumiendo que tenías algo similar)
+    background-color: var(--status-off-route-light); // <--- LÍNEA NUEVA
+    border: 1px solid var(--status-off-route);
+    color: var(--status-off-route); // Ajusta el color del texto si es necesario
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.route-completed-message {
+  padding: 30px;
+
+  h2 {
+    color: var(--status-in-route);
+  }
+
+  p {
+    font-size: 1.1em;
+  }
+}
+
+.simulation-controls {
+  button {
+    font-size: 0.8em;
+    padding: 5px 8px;
+    margin: 2px;
+    background-color: #e0e0e0;
+    color: #333;
+
+    &:hover {
+      background-color: #d0d0d0;
+    }
+  }
+}
+
+.visited-pois-section {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+  text-align: left; // O center si prefieres
+
+  h4 {
+    margin-bottom: 8px;
+    color: var(--primary-color);
+    font-size: 1em;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+
+    li {
+      padding: 4px 0;
+      font-size: 0.9em;
+      color: #555;
+      border-bottom: 1px dashed #f0f0f0;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}

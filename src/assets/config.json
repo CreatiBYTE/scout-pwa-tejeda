@@ -1,0 +1,15 @@
+{
+  "nombreEvento": "Parque Tejeda",
+  "fechaInicio": "2025-05-11",
+  "horaInicio": "13:00",
+  "fechaFin": "2025-05-20",
+  "horaFin": "15:00",
+  "equipos": ["Equipo Halcones", "Equipo Pumas", "Equipo Coyotes", "Equipo Tejones"],
+  "ruta": [
+    { "orden": 1, "nombrePOI": "Nudos", "latitud": 20.744254, "longitud": -100.473144 },
+    { "orden": 2, "nombrePOI": "Telaraña", "latitud": 20.744861, "longitud": -100.472796 },
+    { "orden": 3, "nombrePOI": "Sargento", "latitud": 20.743813, "longitud": -100.472431 },
+    { "orden": 4, "nombrePOI": "Ascenso", "latitud": 20.742498, "longitud": -100.472608 },
+    { "orden": 5, "nombrePOI": "Soy Scout", "latitud": 20.743893, "longitud": -100.472994 }
+  ]
+}
