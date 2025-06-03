@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy:gh": "ng build --configuration production --base-href \"/scout-pwa-tejeda/\" && npx gh-pages -d dist/scout-pwa --message \"Deploy a GitHub Pages\""
+    "deploy:gh": "ng build --configuration production --base-href \"/scout-pwa-tejeda/\" && npx gh-pages -d dist/scout-pwa/browser --message \"Deploy a GitHub Pages\""
   },
   "private": true,
   "dependencies": {
