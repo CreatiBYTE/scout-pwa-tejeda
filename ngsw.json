@@ -1,7 +1,7 @@
 {
   "configVersion": 1,
-  "timestamp": 1749002462501,
-  "index": "/scout-pwa-tejeda/index.html",
+  "timestamp": 1749071665662,
+  "index": "https://CreatiBYTE.github.io/scout-pwa/index.html",
   "assetGroups": [
     {
       "name": "app",
@@ -11,13 +11,13 @@
         "ignoreVary": true
       },
       "urls": [
-        "/scout-pwa-tejeda/favicon.ico",
-        "/scout-pwa-tejeda/index.html",
-        "/scout-pwa-tejeda/main.bacc665de04dfc47.js",
-        "/scout-pwa-tejeda/manifest.webmanifest",
-        "/scout-pwa-tejeda/polyfills.981f4d53ffdda0f3.js",
-        "/scout-pwa-tejeda/runtime.870a03314249ca38.js",
-        "/scout-pwa-tejeda/styles.c7341816e7928cfe.css"
+        "https://CreatiBYTE.github.io/scout-pwa/favicon.ico",
+        "https://CreatiBYTE.github.io/scout-pwa/index.html",
+        "https://CreatiBYTE.github.io/scout-pwa/main.78d1a056ed0123b5.js",
+        "https://CreatiBYTE.github.io/scout-pwa/manifest.webmanifest",
+        "https://CreatiBYTE.github.io/scout-pwa/polyfills.981f4d53ffdda0f3.js",
+        "https://CreatiBYTE.github.io/scout-pwa/runtime.870a03314249ca38.js",
+        "https://CreatiBYTE.github.io/scout-pwa/styles.c7341816e7928cfe.css"
       ],
       "patterns": []
     },
@@ -29,19 +29,19 @@
         "ignoreVary": true
       },
       "urls": [
-        "/scout-pwa-tejeda/assets/config.json",
-        "/scout-pwa-tejeda/assets/favicon.ico",
-        "/scout-pwa-tejeda/assets/fonts/montserrat/montserrat-v29-latin-700.woff2",
-        "/scout-pwa-tejeda/assets/fonts/montserrat/montserrat-v29-latin-regular.woff2",
-        "/scout-pwa-tejeda/assets/icons/iOSShare.svg",
-        "/scout-pwa-tejeda/assets/icons/icon-128x128.png",
-        "/scout-pwa-tejeda/assets/icons/icon-144x144.png",
-        "/scout-pwa-tejeda/assets/icons/icon-152x152.png",
-        "/scout-pwa-tejeda/assets/icons/icon-192x192.png",
-        "/scout-pwa-tejeda/assets/icons/icon-384x384.png",
-        "/scout-pwa-tejeda/assets/icons/icon-512x512.png",
-        "/scout-pwa-tejeda/assets/icons/icon-72x72.png",
-        "/scout-pwa-tejeda/assets/icons/icon-96x96.png"
+        "https://CreatiBYTE.github.io/scout-pwa/assets/config.json",
+        "https://CreatiBYTE.github.io/scout-pwa/assets/favicon.ico",
+        "https://CreatiBYTE.github.io/scout-pwa/assets/fonts/montserrat/montserrat-v29-latin-700.woff2",
+        "https://CreatiBYTE.github.io/scout-pwa/assets/fonts/montserrat/montserrat-v29-latin-regular.woff2",
+        "https://CreatiBYTE.github.io/scout-pwa/assets/icons/iOSShare.svg",
+        "https://CreatiBYTE.github.io/scout-pwa/assets/icons/icon-128x128.png",
+        "https://CreatiBYTE.github.io/scout-pwa/assets/icons/icon-144x144.png",
+        "https://CreatiBYTE.github.io/scout-pwa/assets/icons/icon-152x152.png",
+        "https://CreatiBYTE.github.io/scout-pwa/assets/icons/icon-192x192.png",
+        "https://CreatiBYTE.github.io/scout-pwa/assets/icons/icon-384x384.png",
+        "https://CreatiBYTE.github.io/scout-pwa/assets/icons/icon-512x512.png",
+        "https://CreatiBYTE.github.io/scout-pwa/assets/icons/icon-72x72.png",
+        "https://CreatiBYTE.github.io/scout-pwa/assets/icons/icon-96x96.png"
       ],
       "patterns": []
     }
@@ -63,26 +63,26 @@
     }
   ],
   "hashTable": {
-    "/scout-pwa-tejeda/assets/config.json": "825e4c922f8476c7fa578ca0f2a7bd538247f18f",
-    "/scout-pwa-tejeda/assets/favicon.ico": "3554a379a75728204a69c4562b0551f2fa55048b",
-    "/scout-pwa-tejeda/assets/fonts/montserrat/montserrat-v29-latin-700.woff2": "e5b4095f775e18852b1611ab24f69e308aa4bed8",
-    "/scout-pwa-tejeda/assets/fonts/montserrat/montserrat-v29-latin-regular.woff2": "7030f4f33183b8de843e82eedb9cb6a6cdd107c3",
-    "/scout-pwa-tejeda/assets/icons/iOSShare.svg": "8fd399021af96c9fb4194e7ab86360f60a6fbb99",
-    "/scout-pwa-tejeda/assets/icons/icon-128x128.png": "bac231ecfe0ca7b32ef4452d8bc8bb8819bb2456",
-    "/scout-pwa-tejeda/assets/icons/icon-144x144.png": "5e187d7d3b3255c652b554c7763bbc89bb8a62ee",
-    "/scout-pwa-tejeda/assets/icons/icon-152x152.png": "46f8e081a76e9d096f29d5eae4bebe93d8158ebc",
-    "/scout-pwa-tejeda/assets/icons/icon-192x192.png": "4fd5b8c9a7ec264f4c739e992ad07372201ab8c8",
-    "/scout-pwa-tejeda/assets/icons/icon-384x384.png": "3f25e2a282145084eea71233c3dfc40d17094ce4",
-    "/scout-pwa-tejeda/assets/icons/icon-512x512.png": "3f25e2a282145084eea71233c3dfc40d17094ce4",
-    "/scout-pwa-tejeda/assets/icons/icon-72x72.png": "f12bbb20d642b1176bee7003e1e68a424f463b40",
-    "/scout-pwa-tejeda/assets/icons/icon-96x96.png": "45de09cafe279edc965df0916a448f8237777cd9",
-    "/scout-pwa-tejeda/favicon.ico": "3554a379a75728204a69c4562b0551f2fa55048b",
-    "/scout-pwa-tejeda/index.html": "307e52b2f7bfb6194a2f13808754615cdb529e2d",
-    "/scout-pwa-tejeda/main.bacc665de04dfc47.js": "53bb6b9ce5331981852ffe30be2997177539f8ad",
-    "/scout-pwa-tejeda/manifest.webmanifest": "c379b9d6586fa2fc4684e5e83a56815074cf866d",
-    "/scout-pwa-tejeda/polyfills.981f4d53ffdda0f3.js": "872c70c7bafe045d6dfc10d6278c5bef478bca88",
-    "/scout-pwa-tejeda/runtime.870a03314249ca38.js": "ae715ef8ed58c23cc233ded633d71b1b7b646c82",
-    "/scout-pwa-tejeda/styles.c7341816e7928cfe.css": "c545df6d81c1ca06bbd9e644d939a8e70a68d176"
+    "https://CreatiBYTE.github.io/scout-pwa/assets/config.json": "9f49c3712c2ac2ceae2cbfda53e5826fb8580952",
+    "https://CreatiBYTE.github.io/scout-pwa/assets/favicon.ico": "3554a379a75728204a69c4562b0551f2fa55048b",
+    "https://CreatiBYTE.github.io/scout-pwa/assets/fonts/montserrat/montserrat-v29-latin-700.woff2": "e5b4095f775e18852b1611ab24f69e308aa4bed8",
+    "https://CreatiBYTE.github.io/scout-pwa/assets/fonts/montserrat/montserrat-v29-latin-regular.woff2": "7030f4f33183b8de843e82eedb9cb6a6cdd107c3",
+    "https://CreatiBYTE.github.io/scout-pwa/assets/icons/iOSShare.svg": "8fd399021af96c9fb4194e7ab86360f60a6fbb99",
+    "https://CreatiBYTE.github.io/scout-pwa/assets/icons/icon-128x128.png": "bac231ecfe0ca7b32ef4452d8bc8bb8819bb2456",
+    "https://CreatiBYTE.github.io/scout-pwa/assets/icons/icon-144x144.png": "5e187d7d3b3255c652b554c7763bbc89bb8a62ee",
+    "https://CreatiBYTE.github.io/scout-pwa/assets/icons/icon-152x152.png": "46f8e081a76e9d096f29d5eae4bebe93d8158ebc",
+    "https://CreatiBYTE.github.io/scout-pwa/assets/icons/icon-192x192.png": "4fd5b8c9a7ec264f4c739e992ad07372201ab8c8",
+    "https://CreatiBYTE.github.io/scout-pwa/assets/icons/icon-384x384.png": "3f25e2a282145084eea71233c3dfc40d17094ce4",
+    "https://CreatiBYTE.github.io/scout-pwa/assets/icons/icon-512x512.png": "3f25e2a282145084eea71233c3dfc40d17094ce4",
+    "https://CreatiBYTE.github.io/scout-pwa/assets/icons/icon-72x72.png": "f12bbb20d642b1176bee7003e1e68a424f463b40",
+    "https://CreatiBYTE.github.io/scout-pwa/assets/icons/icon-96x96.png": "45de09cafe279edc965df0916a448f8237777cd9",
+    "https://CreatiBYTE.github.io/scout-pwa/favicon.ico": "3554a379a75728204a69c4562b0551f2fa55048b",
+    "https://CreatiBYTE.github.io/scout-pwa/index.html": "57479860b7e929829a1c8dd9aaaec95aea798179",
+    "https://CreatiBYTE.github.io/scout-pwa/main.78d1a056ed0123b5.js": "d9feac85e61ee148b58c09de2dd2e72a28510908",
+    "https://CreatiBYTE.github.io/scout-pwa/manifest.webmanifest": "c379b9d6586fa2fc4684e5e83a56815074cf866d",
+    "https://CreatiBYTE.github.io/scout-pwa/polyfills.981f4d53ffdda0f3.js": "872c70c7bafe045d6dfc10d6278c5bef478bca88",
+    "https://CreatiBYTE.github.io/scout-pwa/runtime.870a03314249ca38.js": "ae715ef8ed58c23cc233ded633d71b1b7b646c82",
+    "https://CreatiBYTE.github.io/scout-pwa/styles.c7341816e7928cfe.css": "c545df6d81c1ca06bbd9e644d939a8e70a68d176"
   },
   "navigationUrls": [
     {
