@@ -21,6 +21,7 @@ import { NavigationScreenComponent } from './features/navigation-screen/navigati
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+  title = 'scout-pwa';
   eventConfig$: Observable<EventConfig | null>;
   selectedTeam$: Observable<string | null>;
   showWelcomeScreen$: Observable<boolean>;
