@@ -1,7 +1,8 @@
 import { Component, Input, OnInit, OnDestroy, ChangeDetectorRef } from '@angular/core'; // Añadir ChangeDetectorRef
 import { EventConfig } from '../../core/models/config.model';
 import { PwaService } from '../../core/services/pwa.service';
-import { Observable, Subscription, interval, map, startWith, BehaviorSubject } from 'rxjs'; // BehaviorSubject para canInstall
+import { Observable, Subscription, interval, map, startWith, BehaviorSubject } from 'rxjs';
+import { take } from 'rxjs/operators';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
@@ -76,11 +77,12 @@ export class WelcomeScreenComponent implements OnInit, OnDestroy {
   // Método para actualizar el estado del botón de instalación
   updateCanShowInstallPrompt(): void {
     // El botón se muestra si PWA no está instalada Y el prompt está disponible
-    this.pwaService.isInstalled$.subscribe(isInstalled => {
-      this.canShowInstallPrompt$.next(this.pwaService.canInstall() && !isInstalled);
-      this.cdr.detectChanges(); // Notify Angular of changes
-    });
-    this.cdr.detectChanges(); // Notificar a Angular de los cambios
+    this.pwaService.isInstalled$
+      .pipe(take(1))
+      .subscribe(isInstalled => {
+        this.canShowInstallPrompt$.next(this.pwaService.canInstall() && !isInstalled);
+        this.cdr.detectChanges(); // Actualizar vista
+      });
   }
 
 
