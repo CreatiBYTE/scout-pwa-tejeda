@@ -1,15 +1,15 @@
 {
-  "nombreEvento": "Parque Tejeda",
-  "fechaInicio": "2025-05-11",
-  "horaInicio": "13:00",
-  "fechaFin": "2025-05-20",
-  "horaFin": "15:00",
-  "equipos": ["Equipo Halcones", "Equipo Pumas", "Equipo Coyotes", "Equipo Tejones"],
+  "nombreEvento": "Blue Java",
+  "fechaInicio": "2025-06-04",
+  "horaInicio": "19:30",
+  "fechaFin": "2025-06-05",
+  "horaFin": "10:00",
+  "equipos": ["Comisionados", "Dirigentes", "Scouters"],
   "ruta": [
-    { "orden": 1, "nombrePOI": "Nudos", "latitud": 20.744254, "longitud": -100.473144 },
-    { "orden": 2, "nombrePOI": "Telaraña", "latitud": 20.744861, "longitud": -100.472796 },
-    { "orden": 3, "nombrePOI": "Sargento", "latitud": 20.743813, "longitud": -100.472431 },
-    { "orden": 4, "nombrePOI": "Ascenso", "latitud": 20.742498, "longitud": -100.472608 },
-    { "orden": 5, "nombrePOI": "Soy Scout", "latitud": 20.743893, "longitud": -100.472994 }
+    { "orden": 1, "nombrePOI": "Inicio", "latitud": 20.617219542351986, "longitud": -100.4006574755902 },
+    { "orden": 2, "nombrePOI": "Eterea", "latitud": 20.61388814949127, "longitud": -100.38814140308887 },
+    { "orden": 3, "nombrePOI": "Blatt", "latitud": 20.613778088516433, "longitud": -100.38802472699672 },
+    { "orden": 4, "nombrePOI": "Coldwell", "latitud": 20.613593469928453, "longitud": -100.38828221906215 },
+    { "orden": 5, "nombrePOI": "Fin", "latitud": 20.613749685671312, "longitud": -100.38839353073627 }
   ]
 }
